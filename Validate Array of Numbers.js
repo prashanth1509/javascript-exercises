@@ -13,6 +13,6 @@ function numbers() {
 
 function numbers(){
     return Array.prototype.slice.call(arguments).every(function(i) {
-        return Object.prototype.toString.call(i) === '[object Number]';
+        return Object.prototype.toString.call(i) === '[object Number]' && !Number.isNaN(i);
     });
 }
